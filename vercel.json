@@ -1,27 +1,22 @@
-diff --git a/vercel.json b/vercel.json
-index 4c5ecacab0a094549712ac547bd867a7c2eca1b2..927c274493647b09f626e023876066658538b9bf 100644
---- a/vercel.json
-+++ b/vercel.json
-@@ -1,18 +1,22 @@
- {
-   "version": 2,
-   "functions": {
-     "api/rudraksha.js": {
-       "memory": 128,
-       "maxDuration": 10
-+    },
-+    "api/kundli-pdf.js": {
-+      "memory": 128,
-+      "maxDuration": 15
-     }
-   },
-   "headers": [
-     {
-       "source": "/api/(.*)",
-       "headers": [
-         { "key": "X-Content-Type-Options", "value": "nosniff" },
-         { "key": "X-Frame-Options", "value": "DENY" }
-       ]
-     }
-   ]
- }
+{
+  "version": 2,
+  "functions": {
+    "api/rudraksha.js": {
+      "memory": 128,
+      "maxDuration": 10
+    },
+    "api/kundli-pdf.js": {
+      "memory": 128,
+      "maxDuration": 15
+    }
+  },
+  "headers": [
+    {
+      "source": "/api/(.*)",
+      "headers": [
+        { "key": "X-Content-Type-Options", "value": "nosniff" },
+        { "key": "X-Frame-Options", "value": "DENY" }
+      ]
+    }
+  ]
+}
